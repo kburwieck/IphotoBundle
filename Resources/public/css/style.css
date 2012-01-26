@@ -1,0 +1,16 @@
+a {
+	text-decoration: underline;
+	color: black;
+}
+a:visited {
+	color: black;
+}
+.list {
+	list-style: none;
+}
+
+.list .image {
+	float: left;
+	width: 200px;
+	text-align: center;
+}

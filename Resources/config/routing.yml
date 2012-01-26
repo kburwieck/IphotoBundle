@@ -1,0 +1,11 @@
+BurwieckIphotoBundle_index:
+    pattern:  /
+    defaults: { _controller: BurwieckIphotoBundle:Default:index }
+
+BurwieckIphotoBundle_image:
+    pattern:  /image/{slug}
+    defaults: { _controller: BurwieckIphotoBundle:Default:showImage }
+
+BurwieckIphotoBundle_face:
+    pattern:  /face/{slug}
+    defaults: { _controller: BurwieckIphotoBundle:Default:showFace }

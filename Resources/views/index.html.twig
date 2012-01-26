@@ -1,0 +1,17 @@
+{% extends 'BurwieckIphotoBundle::layout.html.twig' %}
+
+{%block content %}
+    <ul class="list">
+        {% for image in images %}
+        <li class="image">
+            <a href="{{ path('BurwieckIphotoBundle_image', { 'slug': image.slug }) }}" title="{{image.caption}}">
+                <img height="90" src="{{ image.filename }}" />
+                <div class="information">
+                    <div class="title">{{image.caption}}</div>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

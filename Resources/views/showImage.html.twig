@@ -1,0 +1,14 @@
+{% extends 'BurwieckIphotoBundle::layout.html.twig' %}
+
+{%block content %}
+    <div class="image">
+        <img width="640" src="{{ image.filename }}" />
+        <div class="information">
+            <span> Faces:
+            {% for imageFace in image.faces %}
+                <a href="{{ path('BurwieckIphotoBundle_face', { 'slug': imageFace.face.slug }) }}">{{imageFace.face.name}}</a>
+            {% endfor %}
+            </span>
+        </div>
+    </div>
+{% endblock %}
